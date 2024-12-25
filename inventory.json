@@ -1,0 +1,283 @@
+[
+    {
+      "id": "F001",
+      "name": "Red Roses Bouquet",
+      "quantity": 50,
+      "price": 20,
+      "type": "Bouquet",
+      "description": "A beautiful bouquet of fresh red roses, symbolizing love and passion. Perfect for romantic occasions like anniversaries, proposals, or Valentine's Day."
+    },
+    {
+      "id": "F002",
+      "name": "White Lilies",
+      "quantity": 30,
+      "price": 25,
+      "type": "Flower",
+      "description": "Elegant white lilies that add a touch of grace and sophistication. Ideal for weddings, sympathy occasions, or as a sign of purity."
+    },
+    {
+      "id": "F003",
+      "name": "Yellow Tulips",
+      "quantity": 40,
+      "price": 18,
+      "type": "Flower",
+      "description": "Vibrant yellow tulips that convey happiness and positivity. A perfect gift to brighten someone's day or celebrate friendships."
+    },
+    {
+      "id": "F004",
+      "name": "Orchid Arrangement",
+      "quantity": 20,
+      "price": 50,
+      "type": "Arrangement",
+      "description": "An exotic arrangement of purple and white orchids, known for their luxury and charm. Perfect for special occasions or as a decorative piece."
+    },
+    {
+      "id": "F005",
+      "name": "Mixed Flower Basket",
+      "quantity": 15,
+      "price": 60,
+      "type": "Basket",
+      "description": "A delightful basket of mixed flowers including roses, daisies, and carnations. Suitable for any celebration or as a thoughtful gift."
+    },
+    {
+      "id": "F006",
+      "name": "Sunflower Bunch",
+      "quantity": 25,
+      "price": 22,
+      "type": "Flower",
+      "description": "A radiant bunch of sunflowers that symbolize adoration and loyalty. Ideal for birthdays or to brighten someone's mood."
+    },
+    {
+      "id": "F007",
+      "name": "Peace Lily Plant",
+      "quantity": 10,
+      "price": 35,
+      "type": "Plant",
+      "description": "A potted peace lily plant, known for its air-purifying qualities and easy maintenance. Perfect for home or office spaces."
+    },
+    {
+      "id": "F008",
+      "name": "Carnation Bouquet",
+      "quantity": 45,
+      "price": 15,
+      "type": "Bouquet",
+      "description": "A vibrant bouquet of carnations available in various colors, representing admiration and good luck. Ideal for celebrations or expressions of gratitude."
+    },
+    {
+      "id": "F009",
+      "name": "Rose and Chocolate Combo",
+      "quantity": 12,
+      "price": 45,
+      "type": "Combo",
+      "description": "A delightful combination of fresh red roses and premium chocolates. A perfect gift to express love and appreciation."
+    },
+    {
+      "id": "F010",
+      "name": "Tulips and Teddy Combo",
+      "quantity": 8,
+      "price": 55,
+      "type": "Combo",
+      "description": "A charming gift set featuring vibrant tulips and a soft teddy bear. Ideal for birthdays, anniversaries, or special surprises."
+    },
+    {
+      "id": "F011",
+      "name": "Premium Valentine's Roses",
+      "quantity": 20,
+      "price": 60,
+      "type": "Special",
+      "description": "Exquisite long-stemmed red roses specially curated for Valentine's Day. Perfect for making a romantic statement."
+    },
+    {
+      "id": "F012",
+      "name": "Wedding Floral Arch",
+      "quantity": 5,
+      "price": 500,
+      "type": "Decor",
+      "description": "A stunning floral arch designed for weddings, featuring a mix of roses, lilies, and greenery. Adds a touch of elegance to your special day."
+    },
+    {
+      "id": "F013",
+      "name": "Diwali Floral Rangoli",
+      "quantity": 10,
+      "price": 75,
+      "type": "Decor",
+      "description": "A vibrant floral rangoli arrangement with marigolds and roses, perfect for Diwali or festive celebrations."
+    },
+    {
+      "id": "F014",
+      "name": "Christmas Wreath",
+      "quantity": 15,
+      "price": 40,
+      "type": "Decor",
+      "description": "A traditional Christmas wreath made with fresh evergreens, pinecones, and red ribbons. Ideal for holiday decor."
+    },
+    {
+      "id": "F015",
+      "name": "Birthday Flower and Balloon Combo",
+      "quantity": 10,
+      "price": 70,
+      "type": "Combo",
+      "description": "A lively gift set including a colorful flower arrangement and helium balloons. Perfect for birthday celebrations."
+    },
+    {
+      "id": "F016",
+      "name": "Exotic Bonsai Plant",
+      "quantity": 7,
+      "price": 85,
+      "type": "Plant",
+      "description": "A meticulously nurtured bonsai plant, symbolizing balance and harmony. A perfect addition to any home or office."
+    },
+    {
+      "id": "F017",
+      "name": "Indoor Succulent Set",
+      "quantity": 20,
+      "price": 30,
+      "type": "Plant",
+      "description": "A set of three low-maintenance succulent plants, ideal for indoor spaces. Great for gifts or personal decor."
+    },
+    {
+      "id": "F018",
+      "name": "Lavender Bunch",
+      "quantity": 18,
+      "price": 28,
+      "type": "Flower",
+      "description": "A fragrant bunch of fresh lavender flowers, known for their calming and relaxing properties. Perfect for homes or as gifts."
+    },
+    {
+      "id": "F019",
+      "name": "Orchid and Candle Combo",
+      "quantity": 12,
+      "price": 65,
+      "type": "Combo",
+      "description": "A luxurious gift set featuring an orchid arrangement and scented candles. Ideal for anniversaries or romantic evenings."
+    },
+    {
+      "id": "F020",
+      "name": "Romantic Rose Basket",
+      "quantity": 14,
+      "price": 80,
+      "type": "Basket",
+      "description": "A heart-shaped basket filled with red and pink roses. Designed for expressing love and affection."
+    },
+    {
+      "id": "F021",
+      "name": "Seasonal Wildflowers",
+      "quantity": 22,
+      "price": 20,
+      "type": "Flower",
+      "description": "A mix of freshly picked seasonal wildflowers, offering a rustic and natural charm. Ideal for casual gifting."
+    },
+    {
+      "id": "F022",
+      "name": "Corporate Desk Plant",
+      "quantity": 30,
+      "price": 25,
+      "type": "Plant",
+      "description": "A small potted plant, perfect for corporate desks and workspaces. Adds a touch of greenery to your environment."
+    },
+    {
+      "id": "F023",
+      "name": "Festive Marigold Garland",
+      "quantity": 50,
+      "price": 15,
+      "type": "Decor",
+      "description": "Traditional marigold garlands, ideal for festive occasions, weddings, or religious ceremonies."
+    },
+    {
+      "id": "F024",
+      "name": "Elegant Calla Lilies",
+      "quantity": 25,
+      "price": 35,
+      "type": "Flower",
+      "description": "Sophisticated calla lilies in white or pink, symbolizing elegance and purity. Perfect for weddings or formal events."
+    },
+    {
+      "id": "F025",
+      "name": "Hydrangea Bouquet",
+      "quantity": 12,
+      "price": 45,
+      "type": "Bouquet",
+      "description": "A stunning bouquet of hydrangeas in pastel shades, known for their lush appearance. Perfect for decor or gifting."
+    },
+    {
+      "id": "F026",
+      "name": "Gerbera Daisies",
+      "quantity": 40,
+      "price": 18,
+      "type": "Flower",
+      "description": "Bright and cheerful gerbera daisies available in multiple colors. Ideal for spreading joy and positivity."
+    },
+    {
+      "id": "F027",
+      "name": "Romantic Candlelight Set",
+      "quantity": 8,
+      "price": 95,
+      "type": "Combo",
+      "description": "A romantic set featuring roses, candles, and chocolates, curated for memorable evenings."
+    },
+    {
+      "id": "F028",
+      "name": "Seasonal Floral Arrangement",
+      "quantity": 16,
+      "price": 65,
+      "type": "Arrangement",
+      "description": "A seasonal arrangement of fresh flowers, customized for events or gifting."
+    },
+    {
+      "id": "F029",
+      "name": "Luxury Orchid Basket",
+      "quantity": 10,
+      "price": 120,
+      "type": "Basket",
+      "description": "A luxurious basket featuring a mix of exotic orchids and decorative elements. Ideal for high-end gifts."
+    },
+    {
+      "id": "F030",
+      "name": "Traditional Flower Strings",
+      "quantity": 30,
+      "price": 10,
+      "type": "Decor",
+      "description": "Traditional flower strings made of jasmine or marigold, used for ceremonies or home decoration."
+    },
+    {
+      "id": "F031",
+      "name": "Wedding Table Centerpiece",
+      "quantity": 5,
+      "price": 150,
+      "type": "Decor",
+      "description": "A sophisticated floral centerpiece for wedding tables, featuring roses, lilies, and orchids."
+    },
+    {
+      "id": "F032",
+      "name": "Blossoming Gift Hamper",
+      "quantity": 12,
+      "price": 90,
+      "type": "Gift",
+      "description": "A gift hamper featuring flowers, chocolates, and a personalized card. Perfect for celebrations or thank-you gifts."
+    },
+    {
+      "id": "F033",
+      "name": "Garden Rose Arrangement",
+      "quantity": 18,
+      "price": 55,
+      "type": "Arrangement",
+      "description": "A charming arrangement of garden roses in various shades. Ideal for home decor or as a thoughtful gift."
+    },
+    {
+      "id": "F034",
+      "name": "Floral Subscription Box",
+      "quantity": 50,
+      "price": 30,
+      "type": "Subscription",
+      "description": "A monthly subscription delivering fresh flowers to your doorstep. A perfect way to enjoy seasonal blooms."
+    },
+    {
+      "id": "F035",
+      "name": "Event Floral Backdrop",
+      "quantity": 3,
+      "price": 500,
+      "type": "Decor",
+      "description": "A customized floral backdrop for events, featuring a mix of roses, hydrangeas, and decorative greens."
+    }
+  ]
+  

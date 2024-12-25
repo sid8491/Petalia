@@ -1,0 +1,199 @@
+[
+    {
+      "question": "What types of flowers do you sell?",
+      "answer": "We sell a wide variety of flowers including roses, lilies, tulips, carnations, orchids, and seasonal flowers."
+    },
+    {
+      "question": "Do you offer same-day delivery?",
+      "answer": "Yes, we offer same-day delivery for orders placed before 2 PM."
+    },
+    {
+      "question": "Can I customize a bouquet?",
+      "answer": "Absolutely! You can customize your bouquet by selecting specific flowers and arrangements."
+    },
+    {
+      "question": "What are your operating hours?",
+      "answer": "We are open Monday to Saturday from 9 AM to 8 PM, and Sunday from 10 AM to 6 PM."
+    },
+    {
+      "question": "Do you deliver to all areas?",
+      "answer": "We deliver to most areas within the city. Please enter your location at checkout to confirm availability."
+    },
+    {
+      "question": "How can I place an order?",
+      "answer": "You can place an order through our website, mobile app, or by calling our customer support."
+    },
+    {
+      "question": "What payment methods do you accept?",
+      "answer": "We accept credit/debit cards, UPI payments, net banking, and cash on delivery."
+    },
+    {
+      "question": "Do you provide flowers for events?",
+      "answer": "Yes, we provide floral arrangements for weddings, birthdays, corporate events, and other special occasions."
+    },
+    {
+      "question": "Can I include a message with my flowers?",
+      "answer": "Yes, you can include a personalized message with your flowers at no extra cost."
+    },
+    {
+      "question": "Do you sell potted plants?",
+      "answer": "Yes, we sell a variety of potted plants including indoor and outdoor options."
+    },
+    {
+      "question": "How do I care for the flowers after delivery?",
+      "answer": "We provide care instructions with every order to help your flowers stay fresh longer."
+    },
+    {
+      "question": "What is your return policy?",
+      "answer": "If there is an issue with your order, please contact us within 24 hours for a resolution or replacement."
+    },
+    {
+      "question": "Do you offer discounts for bulk orders?",
+      "answer": "Yes, we offer discounts on bulk orders. Please contact us for more details."
+    },
+    {
+      "question": "Can I track my order?",
+      "answer": "Yes, once your order is dispatched, you will receive a tracking link via email or SMS."
+    },
+    {
+      "question": "Do you have a loyalty program?",
+      "answer": "Yes, our loyalty program rewards you with points for every purchase that can be redeemed for discounts."
+    },
+    {
+      "question": "Can I schedule a delivery for a specific date?",
+      "answer": "Yes, you can schedule a delivery for a future date during checkout."
+    },
+    {
+      "question": "What are your best-selling flowers?",
+      "answer": "Our best-selling flowers include roses, lilies, and mixed flower bouquets."
+    },
+    {
+      "question": "Do you offer gift wrapping?",
+      "answer": "Yes, we offer premium gift wrapping for an additional charge."
+    },
+    {
+      "question": "Can I cancel or modify my order?",
+      "answer": "You can cancel or modify your order within one hour of placing it. Please contact customer support for assistance."
+    },
+    {
+      "question": "What is the delivery fee?",
+      "answer": "The delivery fee varies based on location and order amount. Free delivery is available for orders above ₹500."
+    },
+    {
+      "question": "Do you provide flowers for funerals?",
+      "answer": "Yes, we provide sympathy and funeral floral arrangements. Please contact us for assistance."
+    },
+    {
+      "question": "Can I order flowers for international delivery?",
+      "answer": "Currently, we only deliver within India."
+    },
+    {
+      "question": "Do you offer subscriptions for regular flower deliveries?",
+      "answer": "Yes, we offer weekly and monthly flower subscription plans."
+    },
+    {
+      "question": "Can I add a gift to my flower order?",
+      "answer": "Yes, you can add gifts like chocolates, teddy bears, or greeting cards to your order."
+    },
+    {
+      "question": "What seasonal flowers do you have?",
+      "answer": "We offer a range of seasonal flowers that vary throughout the year. Please check our website for current options."
+    },
+    {
+      "question": "Do you have eco-friendly packaging?",
+      "answer": "Yes, we use biodegradable and eco-friendly packaging for our products."
+    },
+    {
+      "question": "Can I request a specific flower arrangement?",
+      "answer": "Yes, we can create custom arrangements based on your preferences."
+    },
+    {
+      "question": "What happens if the recipient is not available during delivery?",
+      "answer": "If the recipient is unavailable, we will contact them to reschedule or leave the flowers at a secure location."
+    },
+    {
+      "question": "Do you offer corporate flower services?",
+      "answer": "Yes, we provide floral arrangements and subscriptions for offices and businesses."
+    },
+    {
+      "question": "Can I change the delivery address after placing an order?",
+      "answer": "You can change the delivery address before the order is dispatched. Contact our support team for help."
+    },
+    {
+      "question": "Do you offer midnight delivery?",
+      "answer": "Yes, we offer midnight delivery for special occasions at an additional charge."
+    },
+    {
+      "question": "How can I contact customer support?",
+      "answer": "You can reach our customer support team via phone, email, or live chat."
+    },
+    {
+      "question": "Do you sell artificial flowers?",
+      "answer": "Yes, we offer a selection of high-quality artificial flowers."
+    },
+    {
+      "question": "Can I order flowers for hospitals or hotels?",
+      "answer": "Yes, we deliver to hospitals and hotels. Please ensure to provide detailed recipient information."
+    },
+    {
+      "question": "Do you have a catalog of arrangements?",
+      "answer": "Yes, you can browse our catalog of arrangements on our website or app."
+    },
+    {
+      "question": "Are your flowers fresh?",
+      "answer": "Yes, we source our flowers daily to ensure freshness."
+    },
+    {
+      "question": "Can I order flowers in advance for a special event?",
+      "answer": "Yes, we recommend placing orders for special events in advance to ensure availability."
+    },
+    {
+      "question": "What should I do if my order is delayed?",
+      "answer": "Please contact our customer support team for assistance with any delays."
+    },
+    {
+      "question": "Do you offer floral design services?",
+      "answer": "Yes, our expert florists can create bespoke designs for your needs."
+    },
+    {
+      "question": "How do I know my order has been confirmed?",
+      "answer": "You will receive an order confirmation via email or SMS after placing your order."
+    },
+    {
+      "question": "What if I receive damaged flowers?",
+      "answer": "If you receive damaged flowers, please contact us immediately for a replacement."
+    },
+    {
+      "question": "Do you provide wedding flower arrangements?",
+      "answer": "Yes, we specialize in wedding flower arrangements. Please contact us for consultation."
+    },
+    {
+      "question": "Can I pay with cash on delivery?",
+      "answer": "Yes, cash on delivery is available for select locations."
+    },
+    {
+      "question": "Do you offer flower arrangement workshops?",
+      "answer": "Yes, we host flower arrangement workshops. Please check our website for upcoming sessions."
+    },
+    {
+      "question": "How can I provide feedback about my order?",
+      "answer": "You can provide feedback through our website, app, or by contacting our support team."
+    },
+    {
+      "question": "What flowers are suitable for birthdays?",
+      "answer": "Roses, lilies, and mixed bouquets are popular choices for birthdays."
+    },
+    {
+      "question": "Do you offer festive flower arrangements?",
+      "answer": "Yes, we have special arrangements for festivals like Diwali, Christmas, and Valentine's Day."
+    },
+    {
+      "question": "Can I order flowers anonymously?",
+      "answer": "Yes, you can choose not to include your name in the message card."
+    },
+    {
+      "question": "What if I need help choosing the right flowers?",
+      "answer": "Our florists are happy to assist you in selecting the perfect flowers for any occasion."
+    }
+  ]
+  
