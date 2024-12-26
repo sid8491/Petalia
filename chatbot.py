@@ -3,11 +3,15 @@ import os
 from dotenv import load_dotenv
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_groq import ChatGroq
-from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import END, START, MessagesState, StateGraph
 from langgraph.prebuilt import ToolNode
 
-from tools import query_knowledge_base, search_for_product_recommendations
+from tools import (
+    create_new_customer,
+    data_protection_check,
+    query_knowledge_base,
+    search_for_product_recommendations,
+)
 
 load_dotenv()
 
@@ -18,20 +22,29 @@ You can help the customer acheive the goals listed below.
 #Goals
 1. Answer questions the user might have relating to services offered
 2. Recommed products to the user based on their preferences
+3. Retrieve or create customer profiles. If the customer already has a profile, perform a data protection check to retrieve the profile. If not, create a new profile. Ask the details needed to perform these actions. Do not assume any details about the customer.
 
 #Tone
 * Helpful and friendly
 * Use flower related puns or gen-z emojis to keep things light and fun
-* Dont use words like 'according to our records' or 'as per our database' or 'as per the knowledge base'
-* Use bullet points whenever possible (if you think it will make response better)"""
+* Dont use words like 'according to our records' or 'as per our database' or 'as per the knowledge base'"""
 
 chat_template = ChatPromptTemplate.from_messages(
     [("system", prompt), ("placeholder", "{messages}")]
 )
 
-tools = [query_knowledge_base, query_knowledge_base]
+tools = [
+    query_knowledge_base,
+    search_for_product_recommendations,
+    data_protection_check,
+    create_new_customer,
+]
 
-llm = ChatGroq(model_name="llama-3.3-70b-versatile", api_key=os.getenv("GROQ_API_KEY"))
+llm = ChatGroq(
+    model_name="llama-3.3-70b-versatile",
+    api_key=os.getenv("GROQ_API_KEY"),
+    temperature=0,
+)
 llm_with_prompt = chat_template | llm.bind_tools(tools=tools)
 
 
@@ -59,11 +72,10 @@ graph.add_edge("tools", "agent")
 
 graph.set_entry_point("agent")
 
-checkpointer = MemorySaver()
 
-app = graph.compile(checkpointer=checkpointer)
+app = graph.compile()
 
 # to export the graph as an image, you can use the following code:
-png_data = app.get_graph().draw_mermaid_png()
-with open("output_graph.png", "wb") as f:
-    f.write(png_data)
+# png_data = app.get_graph().draw_mermaid_png()
+# with open("output_graph.png", "wb") as f:
+#     f.write(png_data)

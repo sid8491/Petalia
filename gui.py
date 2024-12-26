@@ -2,6 +2,7 @@ import streamlit as st
 from langchain_core.messages import AIMessage, HumanMessage
 
 from chatbot import app
+from tools import customer_db
 
 st.set_page_config(
     page_title="Flower Shop Chatbot",
@@ -35,7 +36,6 @@ with main_col:
 
         response = app.invoke(
             {"messages": st.session_state.message_history},
-            config={"configurable": {"thread_id": 1}},
         )
         st.session_state.message_history = response["messages"]
 
@@ -50,4 +50,5 @@ with main_col:
 # 3. State variables
 
 with right_col:
+    st.write(customer_db)
     st.json(st.session_state.message_history)
