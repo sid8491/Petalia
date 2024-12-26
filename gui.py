@@ -1,6 +1,7 @@
 import streamlit as st
+from langchain_core.messages import AIMessage, HumanMessage
 
-from vector_store import FlowerShopVectorStore
+from chatbot import app
 
 st.set_page_config(
     page_title="Flower Shop Chatbot",
@@ -9,11 +10,10 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-vector_store = FlowerShopVectorStore()
 
 if "message_history" not in st.session_state:
     st.session_state.message_history = [
-        {"content": "Hey! I am a Petalia. How can I help you?", "type": "assistant"}
+        AIMessage(content="Hey! I am a Petalia. How can I help you?")
     ]
 
 
@@ -31,26 +31,23 @@ with main_col:
     user_input = st.chat_input("Type here...")
 
     if user_input:
-        related_questions = vector_store.query_inventories(user_input)
-        st.session_state.message_history.append(
-            {
-                "content": user_input,
-                "type": "user",
-            }
+        st.session_state.message_history.append(HumanMessage(content=user_input))
+
+        response = app.invoke(
+            {"messages": st.session_state.message_history},
+            config={"configurable": {"thread_id": 1}},
         )
-        st.session_state.message_history.append(
-            {
-                "content": related_questions,
-                "type": "assistant",
-            }
-        )
+        st.session_state.message_history = response["messages"]
 
     for message in reversed(st.session_state.message_history):
-        message_box = st.chat_message(message["type"])
-        message_box.markdown(message.get("content", ""))
+        if isinstance(message, HumanMessage):
+            message_box = st.chat_message("user")
+        else:
+            message_box = st.chat_message("assistant")
+        message_box.markdown(message.content)
 
 
 # 3. State variables
 
 with right_col:
-    st.text(st.session_state.message_history)
+    st.json(st.session_state.message_history)
