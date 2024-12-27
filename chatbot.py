@@ -3,6 +3,7 @@ import os
 from dotenv import load_dotenv
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_groq import ChatGroq
+from langchain_ollama import ChatOllama
 from langgraph.graph import END, START, MessagesState, StateGraph
 from langgraph.prebuilt import ToolNode
 
@@ -40,9 +41,13 @@ tools = [
     create_new_customer,
 ]
 
-llm = ChatGroq(
-    model_name="llama-3.3-70b-versatile",
-    api_key=os.getenv("GROQ_API_KEY"),
+# llm = ChatGroq(
+#     model_name="llama-3.3-70b-versatile",
+#     api_key=os.getenv("GROQ_API_KEY"),
+#     temperature=0,
+# )
+llm = ChatOllama(
+    model="llama3.3:70b-instruct-q2_K",
     temperature=0,
 )
 llm_with_prompt = chat_template | llm.bind_tools(tools=tools)

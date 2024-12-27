@@ -1,5 +1,6 @@
 import streamlit as st
 from langchain_core.messages import AIMessage, HumanMessage
+from langchain_core.messages.tool import ToolMessage
 
 from chatbot import app
 from tools import customer_db
@@ -17,6 +18,9 @@ if "message_history" not in st.session_state:
         AIMessage(content="Hey! I am a Petalia. How can I help you?")
     ]
 
+if "tools" not in st.session_state:
+    st.session_state.tools = {}
+
 
 left_col, main_col, right_col = st.columns([1, 2, 1])
 
@@ -24,6 +28,9 @@ left_col, main_col, right_col = st.columns([1, 2, 1])
 with left_col:
     if st.button("Clear chat"):
         st.session_state.message_history = []
+
+    st.markdown("## Customer")
+    st.write(customer_db)
 
 
 # 2. Chat history and input field
@@ -37,18 +44,27 @@ with main_col:
         response = app.invoke(
             {"messages": st.session_state.message_history},
         )
+
         st.session_state.message_history = response["messages"]
 
     for message in reversed(st.session_state.message_history):
         if isinstance(message, HumanMessage):
-            message_box = st.chat_message("user")
-        else:
-            message_box = st.chat_message("assistant")
-        message_box.markdown(message.content)
+            if message.content:
+                message_box = st.chat_message("user")
+                message_box.markdown(message.content)
+        elif isinstance(message, AIMessage):
+            if message.content:
+                message_box = st.chat_message("assistant")
+                message_box.markdown(message.content)
+        elif isinstance(message, ToolMessage):
+            st.session_state.tools = {"data": message.content, "tool": message.name}
+            if message.name:
+                message_box = st.chat_message("ai")
+                message_box.markdown(f"Calling tool: {message.name}")
 
 
 # 3. State variables
 
 with right_col:
-    st.write(customer_db)
-    st.json(st.session_state.message_history)
+    st.markdown("## State Management")
+    st.write(st.session_state.tools)
