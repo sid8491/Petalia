@@ -1,3 +1,6 @@
+import json
+from typing import Dict, List
+
 from langchain_core.tools import tool
 
 from vector_store import FlowerShopVectorStore
@@ -27,6 +30,24 @@ customer_db = [
         "email": "priya.patel@gmail.com",
     },
 ]
+
+orders_db = [
+    {
+        "order_id": "ORD001",
+        "customer_id": "CUST001",
+        "status": "Processing",
+        "products": ["Bouquet of Roses", "Bouquet of Lilies"],
+    },
+    {
+        "order_id": "ORD002",
+        "customer_id": "CUST002",
+        "status": "Delivered",
+        "products": ["Bouquet of Tulips"],
+    },
+]
+
+with open("inventory.json") as f:
+    inventory_db = json.load(f)
 
 
 @tool
@@ -110,7 +131,7 @@ def query_knowledge_base(query: str) -> list:
 
 
 @tool
-def search_for_product_recommendations(description: str) -> list:
+def search_for_product_recommendations(description: str) -> List[Dict[str, str]]:
     """
     Look up the information in a knowledge base to help with product recommendations for customers.
     For example:
@@ -127,3 +148,67 @@ def search_for_product_recommendations(description: str) -> list:
         List[Dict[str, str]]: Potentially relevant products based on the description
     """
     return vector_store.query_inventories(query=description)
+
+
+@tool
+def retrieve_existing_customer_orders(customer_id: str) -> List[Dict]:
+    """
+    Retrieve the order history of an existing customer, including their status, items and order ID.
+
+    Args:
+        customer_id (str): The ID of the customer
+
+    Returns:
+        List[Dict]: The order history of the customer
+    """
+    orders = [order for order in orders_db if order["customer_id"] == customer_id]
+    if not orders:
+        return f"No orders found for customer {customer_id}"
+    return orders
+
+
+@tool
+def place_order(customer_id: str, products: Dict[str, int]) -> str:
+    """
+    Place an order for a customer with the specified products nd their quantities.
+
+    Args:
+        customer_id (str): The ID of the customer
+        products (Dict[str, int]): The products to be ordered, with item id as the key and quantity of that item as the value
+
+    Returns:
+        str: A message confirming the placement of the order
+    """
+    availability_messages = []
+    valid_item_ids = [item["id"] for item in inventory_db]
+
+    for item_id, quantity in products.items():
+        if item_id not in valid_item_ids:
+            availability_messages.append(
+                f"Item with ID: {item_id} not found in inventory"
+            )
+        else:
+            inventory_item = [item for item in inventory_db if item["id"] == item_id][0]
+            if quantity > inventory_item["quantity"]:
+                availability_messages.append(
+                    f"Insufficient quantity for item: {inventory_item['name']}. Available quantity: {inventory_item['quantity']}"
+                )
+    if availability_messages:
+        return f"Cannot place the order due to following issues:\n {'\n'.join(availability_messages)}"
+
+    order_id = f"ORD{len(orders_db) + 1:03d}"
+    orders_db.append(
+        {
+            "order_id": order_id,
+            "customer_id": customer_id,
+            "status": "Processing",
+            "products": list(products.keys()),
+            "quantity": list(products.values()),
+        }
+    )
+
+    for item_id, quantity in products.items():
+        inventory_item = [item for item in inventory_db if item["id"] == item_id][0]
+        inventory_item["quantity"] -= quantity
+        inventory_item["quantity"] = max(0, inventory_item["quantity"])
+    return f"Order placed - Order ID: {order_id}"

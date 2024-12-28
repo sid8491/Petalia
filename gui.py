@@ -3,7 +3,7 @@ from langchain_core.messages import AIMessage, HumanMessage
 from langchain_core.messages.tool import ToolMessage
 
 from chatbot import app
-from tools import customer_db
+from tools import customer_db, orders_db
 
 st.set_page_config(
     page_title="Flower Shop Chatbot",
@@ -31,6 +31,8 @@ with left_col:
 
     st.markdown("## Customer")
     st.write(customer_db)
+    st.markdown("## Orders")
+    st.write(orders_db)
 
 
 # 2. Chat history and input field
@@ -67,4 +69,5 @@ with main_col:
 
 with right_col:
     st.markdown("## State Management")
+    st.write(len(st.session_state.message_history))
     st.write(st.session_state.tools)

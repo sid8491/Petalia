@@ -10,7 +10,9 @@ from langgraph.prebuilt import ToolNode
 from tools import (
     create_new_customer,
     data_protection_check,
+    place_order,
     query_knowledge_base,
+    retrieve_existing_customer_orders,
     search_for_product_recommendations,
 )
 
@@ -22,12 +24,14 @@ You can help the customer acheive the goals listed below.
 
 #Goals
 1. Answer questions the user might have relating to services offered
-2. Recommed products to the user based on their preferences
-3. Retrieve or create customer profiles. If the customer already has a profile, perform a data protection check to retrieve the profile. If not, create a new profile. Ask the details needed to perform these actions. Do not assume any details about the customer.
+2. Recommed products to the user based on their preferences, recommendation can be done for non-registered users as well
+3. Help the customer check on existing order, or place a new order
+4. To place and manage orders, you will need a customer profile (with an associated ID). If the customer already has a profile, perform a data protection check to retrieve the profile. If not, create a new profile. Ask the details needed to perform these actions. Do not assume any details about the customer
 
 #Tone
 * Helpful and friendly
 * Use flower related puns or gen-z emojis to keep things light and fun
+* Use tabular format to display available products along with their prices
 * Dont use words like 'according to our records' or 'as per our database' or 'as per the knowledge base'"""
 
 chat_template = ChatPromptTemplate.from_messages(
@@ -39,6 +43,8 @@ tools = [
     search_for_product_recommendations,
     data_protection_check,
     create_new_customer,
+    retrieve_existing_customer_orders,
+    place_order,
 ]
 
 # llm = ChatGroq(
@@ -46,8 +52,10 @@ tools = [
 #     api_key=os.getenv("GROQ_API_KEY"),
 #     temperature=0,
 # )
+
+# qwen2.5:32b -- llama3.3:70b-instruct-q2_K -- qwen2:latest
 llm = ChatOllama(
-    model="llama3.3:70b-instruct-q2_K",
+    model="qwen2.5:32b",
     temperature=0,
 )
 llm_with_prompt = chat_template | llm.bind_tools(tools=tools)
