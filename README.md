@@ -2,6 +2,9 @@
 
 Petalia is a chatbot designed to provide exceptional customer service for flower shop businesses. Built with cutting-edge AI technologies, it handles customer queries, order management, product recommendations, and more.
 
+
+
+
 ## Features
 
 - **Customer Management**
@@ -18,7 +21,7 @@ Petalia is a chatbot designed to provide exceptional customer service for flower
 - **Knowledge Base Search**
   - Answer FAQs and provide information about business processes.
 
-## Tools and Technologies
+## Technologies Used
 
 - **Backend**
   - Python
@@ -30,9 +33,13 @@ Petalia is a chatbot designed to provide exceptional customer service for flower
 
 - **Databases**
   - Customer and order data are maintained in memory for the prototype.
-  - Inventory is loaded from a JSON file.
+  - Inventory and FAQs are loaded from a JSON file.
 
-## Key Functionalities
+
+## Agent Flow
+![Flow](/images/output_graph.png "Flow")
+
+### Tools:
 
 ### 1. Data Protection Check
 ```python
